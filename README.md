@@ -1,8 +1,31 @@
-# React + Vite
+# Тестове завдання на вакансію Junior Frontend Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей проект створено на React + Vite + Storybook і містить файли вихідного коду.
 
-Currently, two official plugins are available:
+## Локальний запуск проекту
+1. Склонуйте цей репозиторій на локальний комп'ютер `git clone https://github.com/MaksymChukhrai/Gusarov-test-task.git`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Встановіть залежності `npm install`
+
+3. Запустіть Storybook: `npm run sb`
+
+
+## Виконання вимог завдання
+- Кожен компонент розроблено з акцентом на його функціональність та гнучкість.
+
+- Незалежні компоненти: Компоненти реалізовані як окремі функціональні елементи, готові до інтеграції в будь-який проект.
+
+- Менеджмент стану: Усі елементи управління станом винесені за межі самих компонентів.
+
+- Storybook: Усі фінальні компоненти представлені у Storybook з підготовленим плейграундом та описом параметрів.
+
+## Структура проекту
+
+- **`.storybook`**: Конфігурація Storybook для відображення компонентів.
+- **`src/components`**: Папка з компонентами, кожен з яких має окрему директорію.
+- **`src/stories`**: Зберігає історії для Storybook, включаючи опис компонентів.
+- **`public`**: Статичні ресурси, необхідні для проекту.
+- **`package.json`**: Файл з залежностями та налаштуваннями проекту.
+
+## Висновок
+Проект повністю відповідає заданим вимогам. Компоненти розроблено з урахуванням принципів модульності та повторного використання. 
