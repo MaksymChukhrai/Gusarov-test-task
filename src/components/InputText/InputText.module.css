@@ -1,0 +1,61 @@
+.inputText {
+  position: relative;
+  width: 100%;
+}
+
+.inputTextWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input {
+  padding: 8px 12px 8px 40px;
+  width: 100%;
+  max-width: 323px;
+  border: 1px solid #D1D1D6;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #FFF;
+  overflow: hidden;
+  color: #1A1A1E;
+  text-overflow: ellipsis;
+  font-family: 'Inter';
+  font-size: 12px;
+  padding-right: 60px; /* Обеспечиваем место для правых иконок */
+}
+
+
+.inputTextIcon {
+  display: flex;
+  align-items: center;
+}
+
+.inputTextIcon img {
+  width: 16px;
+  height: 16px;
+}
+
+.beforeLeft {
+  position: absolute;
+  left: 12px;
+}
+
+.rightIcons {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;  /* Фиксированное расстояние от правого края */
+}
+
+.afterRight img {
+  width: 16px;
+  height: 16px;
+}
+
+.afterLeft img {
+  width: 24px;
+  height: 16px;
+}

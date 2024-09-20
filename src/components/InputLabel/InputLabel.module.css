@@ -1,0 +1,35 @@
+.inputLabel {
+  display: flex;
+  align-items: center;
+}
+
+.inputLabelText {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #1A1A1E;
+  margin-right: 4px;
+}
+
+.inputLabelIcon {
+  display: flex;
+  align-items: center;
+}
+
+.inputLabelIcon img {
+  width: 12px;
+  height: 12px;
+}
+
+.inputLabel.size-sm {
+  font-size: 12px;
+}
+
+.inputLabel.size-md {
+  font-size: 14px;
+}
+
+.inputLabel.size-lg {
+  font-size: 16px;
+}
