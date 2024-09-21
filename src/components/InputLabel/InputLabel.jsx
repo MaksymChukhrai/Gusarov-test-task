@@ -1,12 +1,8 @@
-import PropTypes from 'prop-types';
-import styles from './InputLabel.module.css';
-import IconInfo from '../../assets/icons/info-icon.png';
+import PropTypes from "prop-types";
+import styles from "./InputLabel.module.css";
+import IconInfo from "../../assets/icons/info-icon.png";
 
-const InputLabel = ({ 
-  label,
-  showInfoIcon,
-  className
-}) => (
+const InputLabel = ({ label, showInfoIcon, className }) => (
   <div className={`${styles.inputLabel} ${className}`}>
     <label className={styles.inputLabelText}>{label}</label>
     {showInfoIcon && (
@@ -25,7 +21,7 @@ InputLabel.propTypes = {
 
 InputLabel.defaultProps = {
   showInfoIcon: true,
-  className: '',
+  className: "",
 };
 
 export default InputLabel;

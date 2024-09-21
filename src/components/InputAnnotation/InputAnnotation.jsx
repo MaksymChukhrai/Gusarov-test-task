@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import styles from './InputAnnotation.module.css';
+import PropTypes from "prop-types";
+import styles from "./InputAnnotation.module.css";
 
 const InputAnnotation = ({ text }) => (
   <div className={styles.inputAnnotation}>

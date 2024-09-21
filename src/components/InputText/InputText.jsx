@@ -15,6 +15,10 @@ const InputText = ({
   className,
   style,
   readOnly,
+  size,
+  alignment,
+  state,
+  showBorder,
 }) => (
   <div className={`${styles.inputText} ${className}`} style={style}>
     <div className={styles.inputTextWrapper}>
@@ -28,7 +32,13 @@ const InputText = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={styles.input} 
+        className={`
+          ${styles.input} 
+          ${styles[size] || styles.medium}
+          ${styles[alignment] || styles.left}
+          ${styles[state] || styles.default}
+          ${!showBorder ? styles.borderNone : ''}
+        `}
         readOnly={readOnly}
       />
       <div className={styles.rightIcons}>
@@ -47,7 +57,6 @@ const InputText = ({
   </div>
 );
 
-
 InputText.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
@@ -58,6 +67,10 @@ InputText.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   readOnly: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  alignment: PropTypes.oneOf(['left', 'center', 'right']),
+  state: PropTypes.oneOf(['default', 'hover', 'focus', 'disabled', 'error']),
+  showBorder: PropTypes.bool,
 };
 
 InputText.defaultProps = {
@@ -68,6 +81,10 @@ InputText.defaultProps = {
   className: '',
   style: {},
   readOnly: false,
+  size: 'medium',
+  alignment: 'left',
+  state: 'default',
+  showBorder: true,
 };
 
 export default InputText;

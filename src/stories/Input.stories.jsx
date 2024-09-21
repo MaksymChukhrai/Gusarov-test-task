@@ -1,63 +1,59 @@
-
-import React from 'react';
-import InputText from '../components/InputText/InputText';
-import InputLabel from '../components/InputLabel/InputLabel';
-import InputGroup from '../components/InputGroup/InputGroup';
-import InputAnnotation from '../components/InputAnnotation/InputAnnotation';
+import React from "react";
+import InputText from "../components/InputText/InputText";
+import InputLabel from "../components/InputLabel/InputLabel";
+import InputGroup from "../components/InputGroup/InputGroup";
+import InputAnnotation from "../components/InputAnnotation/InputAnnotation";
 
 export default {
-  title: 'Components/Input',
+  title: "Components/Input",
   component: InputGroup,
   argTypes: {
-    labelSize: {
-      control: { type: 'select', options: ['small', 'medium', 'large'] },
-    },
     state: {
-      control: { type: 'select', options: ['default', 'hover', 'focus', 'disabled', 'error'] },
-    },
-    labelPosition: {
-      control: { type: 'radio', options: ['top', 'left'] },
+      control: { type: "select" },
+      options: ["default", "hover", "focus", "disabled", "error"],
     },
     showBorder: {
-      control: 'boolean',
+      control: "boolean",
     },
     showHelperText: {
-      control: 'boolean',
+      control: "boolean",
     },
     showLabel: {
-      control: 'boolean',
+      control: "boolean",
     },
     showInfoIcon: {
-      control: 'boolean',
+      control: "boolean",
     },
     inputSize: {
-      control: { type: 'select', options: ['small', 'medium', 'large'] },
+      control: { type: "select" },
+      options: ["small", "medium", "large"],
     },
     alignment: {
-      control: { type: 'select', options: ['left', 'center', 'right'] },
+      control: { type: "select" },
+      options: ["left", "center", "right"],
     },
     showIconBefore: {
-      control: 'boolean',
+      control: "boolean",
     },
     showIconAfter: {
-      control: 'boolean',
+      control: "boolean",
     },
     showInputTextIcon: {
-      control: 'boolean',
+      control: "boolean",
     },
   },
 };
 
 const Template = (args) => {
-  const [inputValue, setInputValue] = React.useState('');
+  const [inputValue, setInputValue] = React.useState("");
 
   return (
-    <InputGroup style={{ width: '300px' }}>
+    <InputGroup style={{ width: "320px" }}>
       {args.showLabel && (
         <InputLabel
           label="Email"
           showInfoIcon={args.showInfoIcon}
-          className={args.labelSize}
+          size={args.inputSize}
         />
       )}
       <InputText
@@ -67,25 +63,27 @@ const Template = (args) => {
         iconBeforeLeft={args.showIconBefore ? undefined : null}
         iconAfterLeft={args.showIconAfter ? undefined : null}
         iconAfterRight={args.showInputTextIcon ? undefined : null}
-        className={`${args.state} ${args.inputSize} ${args.alignment}`}
-        style={{ border: args.showBorder ? undefined : 'none' }}
+        size={args.inputSize}
+        alignment={args.alignment}
+        state={args.state}
+        showBorder={args.showBorder}
       />
-      {args.showHelperText && <InputAnnotation text="This is a hint text to help user." />}
+      {args.showHelperText && (
+        <InputAnnotation text="This is a hint text to help user." />
+      )}
     </InputGroup>
   );
 };
 
 export const Playground = Template.bind({});
 Playground.args = {
-  labelSize: 'medium',
-  state: 'default',
-  labelPosition: 'top',
+  state: "default",
   showBorder: true,
   showHelperText: true,
   showLabel: true,
   showInfoIcon: true,
-  inputSize: 'medium',
-  alignment: 'left',
+  inputSize: "small",
+  alignment: "left",
   showIconBefore: true,
   showIconAfter: true,
   showInputTextIcon: true,
