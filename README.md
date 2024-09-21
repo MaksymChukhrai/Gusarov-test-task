@@ -9,6 +9,8 @@
 
 3. Запустіть Storybook: `npm run sb`
 
+4. Відкрийте в вашому браузері Storybook **Playground** за посиланням `http://localhost:6006/?path=/story/input-components--playground`
+
 
 ## Виконання вимог завдання
 - Кожен компонент розроблено з акцентом на його функціональність та гнучкість.
